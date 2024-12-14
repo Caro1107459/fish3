@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="max-age=3600">
+    <title>科学去鱼腥味</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        #container {
+            width: 800px;
+            margin: 20px;
+            position: relative;
+        }
+
+        #title {
+            text-align: left;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #player {
+            width: 800px;
+            height: 450px;
+            background-color: #000;
+        }
+
+        #button-row {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            position: relative;
+            top: 0;
+        }
+
+        #likeButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: white;
+            color: skyblue;
+            border: 1px solid skyblue;
+            padding: 5px;
+            margin-right: 5px;
+        }
+
+        #coinButton,
+        #collectButton,
+        #shareButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: white;
+            color: skyblue;
+            border: 1px solid skyblue;
+            padding: 5px;
+            margin-right: 5px;
+        }
+
+     .close-btn {
+            cursor: pointer;
+            color: #f00;
+            float: right;
+            font-size: 18px;
+        }
+
+     .bold {
+            font-weight: bold;
+        }
+
+     .blue {
+            color: darkblue;
+        }
+
+     .small-text {
+            font-size: 14px;
+        }
+
+     .divider {
+            border-top: 1px solid #ccc;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="title">鱼的腥味从何而来？</div>
+        <video id="player" controls width="800" height="450">
+            <source src="6.mp4" type="video/mp4">
+            您的浏览器不支持HTML5视频播放。
+        </video>
+        <div id="button-row">
+            <button id="likeButton">点赞</button>
+            <button id="coinButton">投币</button>
+            <button id="collectButton">收藏</button>
+            <button id="shareButton">转发</button>
+        </div>
+        <hr class="divider">
+        <p>鱼腥味到底从何而来呢，你别说还真挺复杂，一起来看看吧！</p>
+    </div>
+
+</body>
+
+</html>
