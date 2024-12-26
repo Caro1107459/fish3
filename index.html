@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="max-age=3600">
     <title>科学去鱼腥味</title>
+    <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -73,26 +74,26 @@
             margin-right: 5px;
         }
 
-     .close-btn {
+        .close-btn {
             cursor: pointer;
             color: #f00;
             float: right;
             font-size: 18px;
         }
 
-     .bold {
+        .bold {
             font-weight: bold;
         }
 
-     .blue {
+        .blue {
             color: darkblue;
         }
 
-     .small-text {
+        .small-text {
             font-size: 14px;
         }
 
-     .divider {
+        .divider {
             border-top: 1px solid #ccc;
             margin-top: 30px;
         }
@@ -103,7 +104,7 @@
 
     <div id="container">
         <div id="title">鱼的腥味从何而来？</div>
-        <video id="player" controls width="800" height="450">
+        <video id="player" class="video-js vjs-default-skin" controls preload="auto" width="800" height="450">
             <source src="6.mp4" type="video/mp4">
             您的浏览器不支持HTML5视频播放。
         </video>
@@ -114,8 +115,18 @@
             <button id="shareButton">转发</button>
         </div>
         <hr class="divider">
+        <p style="color: skyblue; font-weight: bold;">视频简介</p>
         <p>鱼腥味到底从何而来呢，你别说还真挺复杂，一起来看看吧！</p>
     </div>
+
+    <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
+    <script>
+        var player = videojs('player', {
+            controlBar: {
+                playbackRateMenuButton: false // 移除播放速度控件
+            }
+        });
+    </script>
 
 </body>
 
