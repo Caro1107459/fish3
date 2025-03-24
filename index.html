@@ -104,10 +104,7 @@
 
     <div id="container">
         <div id="title">鱼的腥味从何而来？</div>
-        <video id="player" class="video-js vjs-default-skin" controls preload="auto" width="800" height="450">
-            <source src="6.mp4" type="video/mp4">
-            您的浏览器不支持HTML5视频播放。
-        </video>
+        <div id="player"></div>
         <div id="button-row">
             <button id="likeButton">点赞</button>
             <button id="coinButton">投币</button>
@@ -119,15 +116,23 @@
         <p>鱼腥味到底从何而来呢，你别说还真挺复杂，一起来看看吧！</p>
     </div>
 
-    <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
+     <script src="https://player.polyv.net/script/player.js"></script>
     <script>
-        var player = videojs('player', {
-            controlBar: {
-                playbackRateMenuButton: false // 移除播放速度控件
-            }
-        });
+        var player;
+
+        function initPlayer() {
+            player = polyvPlayer({
+                wrap: '#player',
+                width: '100%',
+                height: 450,
+                vid: 'g9e4d25871afa882f5f26dfe0986a3fc_g',
+                speed: false
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', initPlayer);
+
     </script>
 
 </body>
-
 </html>
